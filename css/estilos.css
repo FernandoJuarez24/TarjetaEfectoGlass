@@ -1,0 +1,170 @@
+*{
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+}
+
+body{
+	background: black !important;
+	font-family: sans-serif !important;
+}
+/* ESTILOS ELEMENTOS FONDO */
+.contenedorFondoTri{
+	max-width: 1200px !important;
+	height: 600px !important;
+	margin: auto !important;
+	position: fixed !important;
+
+	/* CENTRADO DE ELEMENTOS */
+	top: 50% !important;
+	left: 50% !important;
+	transform: translate(-50%, -50%) !important;
+}
+.contenedorFondoTri .triangulo{
+	width: 300px;
+	height: 300px;
+	background-color: red;
+	position: absolute !important;
+}
+.tri01{
+	width: 250px !important;
+	height: 250px !important;
+	background-color: darksalmon !important;
+	right: 100px !important;
+	top:  100px !important;
+	animation: t1 9s ease infinite !important;
+}
+.tri02{
+	width: 200px !important;
+	height: 200px !important;
+	background-color: darkcyan !important;
+	top:  350px !important;
+	animation: t2 9s ease infinite !important;
+}
+.tri03{
+	width: 300px !important;
+	height: 300px !important;
+	background-color: darkmagenta !important;
+	left:  200px !important;
+	animation: t3 7s ease infinite !important;
+}
+@keyframes t1{
+	0%{
+		transform: rotate(45deg) translateY(0px);
+	}
+	50%{
+		transform: rotate(45deg) translateY(20px);
+	}
+	100%{
+		transform: rotate(45deg) translateY(0px);
+	}
+}
+@keyframes t2{
+	0%{
+		transform: rotate(65deg) translateY(0px);
+	}
+	50%{
+		transform: rotate(65deg) translateY(20px);
+	}
+	100%{
+		transform: rotate(65deg) translateY(0px);
+	}
+}
+@keyframes t3{
+	0%{
+		transform: rotate(45deg) translateY(0px);
+	}
+	50%{
+		transform: rotate(45deg) translateY(20px);
+	}
+	100%{
+		transform: rotate(45deg) translateY(0px);
+	}
+}
+
+
+/* ESTILOS CARDS GLASS */
+.contenedorCards{
+	width: 100% !important;
+	margin: auto !important;
+	display: flex !important;
+	flex-wrap: wrap !important;
+	justify-content: center !important;
+	position: absolute !important;
+
+	/* CENTRADO DE ELEMENTOS */
+	top: 50% !important;
+	left: 50% !important;
+	transform: translate(-50%, -50%) !important;
+}
+.contenedorCards .card{
+	width: 350px !important;
+	margin: 10px !important;
+	padding: 20px !important;
+	box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5) !important;
+	border-radius: 15px !important;
+	background-color: rgba(255, 255, 255, 0.2) !important;
+	border-left: 1px solid rgba(255, 255, 255, 0.5);
+	border-top: 1px solid rgba(255, 255, 255, 0.5);
+
+	/* EFECTO GLASS */
+	-webkit-backdrop-filter: blur(5px) !important;
+	backdrop-filter: blur(5px) !important;
+	transition: all 0.3s !important;
+}
+.contenedorCards .card:hover{
+	transform: translateY(-10px) !important;
+}
+.contenedorCards .card .imgCard{
+	width: 100% !important;
+	height: 200px !important;
+	border-radius: 15px !important;
+	overflow: hidden !important;
+}
+.contenedorCards .card .imgCard img{
+	width: 110% !important;
+	transition: all 0.3s !important;
+}
+.contenedorCards .card:hover .imgCard img{
+	transform: scale(1.1) !important;
+}
+.contenedorCards .card h2{
+	font-size: 20px !important;
+	font-weight: 400 !important;
+	margin-top: 20px !important;
+	color: white !important;
+}
+.contenedorCards .card p{
+	margin-top: 20px !important;
+	font-size: 14px !important;
+	font-weight: 300px !important;
+	letter-spacing: 0.5px !important;
+	color: white !important;
+}
+.contenedorCards .card hr{
+	margin-top: 30px !important;
+	border: none !important;
+	height: 0.6px !important;
+	background-color: black !important;
+}
+.contenedorCards .card .footerCard{
+	margin-top: 10px !important;
+	display: flex !important;
+	color: white !important;
+	justify-content: space-between !important;
+}
+.contenedorCards .card .footerCard h3{
+	font-size: 15px !important;
+	font-weight: 500 !important;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1200px){
+	.contenedorCards{
+		position: relative !important;
+		top: 0 !important;
+		left: 0 !important;
+		transform: none !important;
+		padding-top: 100px !important;
+	}
+}
